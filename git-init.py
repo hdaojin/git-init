@@ -83,7 +83,7 @@ def copy_ssh_pub_key(ssh_pub_key_file):
     elif os_platform == "Darwin":
         os.system("pbcopy < " + str(ssh_pub_key_file))
     print("ssh public key is copied to clipboard!")
-    print("If not work, please copy it manually:")
+    print("If not work, please copy it manually: \n")
     print(ssh_pub_key_file.read_text())
     
 # Main function
