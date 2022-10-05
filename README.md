@@ -17,7 +17,7 @@ A script for git initialization.
 ```bash
 $ curl https://raw.githubusercontent.com/hdaojin/git-init/main/git-init.py  > git-init.py
 ```
-```
+
 
 2. Run the script.
 
