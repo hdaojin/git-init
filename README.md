@@ -1,5 +1,5 @@
 # git-init
-A script for git initialization.
+A script for git initialization. Supports Windows, Linux, and macOS.
 
 ## Function
 
