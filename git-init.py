@@ -3,9 +3,9 @@ Name: git-init.py
 Discription: This script is used to initialize a git environment.
 Usage: python3 git-init.py
 Author: hdaojin
-Version: 1.0
+Version: 1.0.1
 Date: 2022-10-4
-Update: 2022-10-4
+Update: 2023-03-15
 """
 
 import os
@@ -85,6 +85,17 @@ def copy_ssh_pub_key(ssh_pub_key_file):
     print("ssh public key is copied to clipboard!")
     print("If not work, please copy it manually: \n")
     print(ssh_pub_key_file.read_text())
+
+def test_ssh_to_github():
+    """
+    Test ssh to GitHub
+    """
+    if os.system("ssh -T git@github.com") == 0:
+        print("ssh to GitHub is OK!")
+    else:
+        print("ssh to GitHub is failed!")
+        sys.exit(1)
+
     
 # Main function
 def main():
@@ -103,6 +114,7 @@ def main():
              1. Login your github account;
              2. Click "Settings" -> "SSH and GPG keys" -> "New SSH key";
     """)
+    test_ssh_to_github()
 
 if __name__ == "__main__":
     # Check system platform
